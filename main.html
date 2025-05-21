@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尹若祎的网页</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(120deg, #f0f4f8 0%, #e0eafc 100%);
+            color: #222;
+        }
+
+        header {
+            background: #993a8e;
+            color: #fff;
+            padding: 24px 0 16px 0;
+            text-align: center;
+            letter-spacing: 2px;
+            box-shadow: 0 2px 8px #bbb;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeIn 1.2s;
+        }
+
+        .intro img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #e1afaf;
+            box-shadow: 0 2px 8px #522a2a;
+            margin-bottom: 16px;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px #ccc;
+            width: 300px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            animation: fadeInUp 1s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 24px #bbb;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #112756;
+        }
+
+        .card p {
+            color: #9b3ba4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px 0 12px 0;
+            color: #888;
+            font-size: 15px;
+        }
+
+        @media (max-width: 900px) {
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>·121的网页·</h1>
+
+        <button class="cute-popup-btn" onclick="showPopup('打开它的你天天开心')">🐾 喵喵</button>
+        <button class="cute-popup-btn" onclick="showPopup('打开它的你身体健康')">🍬 汪汪</button>
+        </div>
+        <!-- ...已有 script 代码下方添加： -->
+        <script>
+            function setTheme(theme) {
+                document.body.className = theme;
+            }
+            // 新增弹窗函数
+            function showPopup(msg) {
+                // 简单弹窗
+                alert(msg);
+            }
+        </script>
+        <!-- ...已有样式下方添加： -->
+        <style>
+            .cute-popup-btn {
+                margin: 8px 4px;
+                padding: 4px 14px;
+                border: none;
+                border-radius: 16px;
+                background: #ffe0fa;
+                color: #d46fd7;
+                font-size: 14px;
+                font-weight: bold;
+                box-shadow: 0 2px 8px #f3c1f7;
+                cursor: pointer;
+                transition: background 0.2s, color 0.2s, transform 0.2s;
+                outline: none;
+                position: relative;
+                vertical-align: middle;
+            }
+
+            .cute-popup-btn:hover {
+                background: #fff0fb;
+                color: #fff;
+                transform: scale(1.1) rotate(-5deg);
+                box-shadow: 0 4px 16px #f3c1f7;
+            }
+        </style>
+        <style>
+            /* ...原有样式... */
+            body.theme-light {
+                background: linear-gradient(120deg, #f0f4f8 0%, #e0eafc 100%);
+                color: #222;
+            }
+
+            body.theme-dark {
+                background: #222;
+                color: #fff;
+            }
+
+            body.theme-pink {
+                background: linear-gradient(120deg, #ffd6ec 0%, #ffb6c1 100%);
+                color: #c84ec0;
+            }
+
+            body.theme-blue {
+                background: linear-gradient(120deg, #cce2ff 0%, #3877ff 100%);
+                color: #003366;
+            }
+
+            body.theme-green {
+                background: linear-gradient(120deg, #e0ffe0 0%, #a0e6a0 100%);
+                color: #226622;
+            }
+
+            body.theme-yellow {
+                background: linear-gradient(120deg, #fffbe0 0%, #ffe066 100%);
+                color: #b8860b;
+            }
+
+            .theme-toggle-btn {
+                margin: 10px 6px;
+                padding: 6px 16px;
+                border: none;
+                border-radius: 18px;
+                background: #fff;
+                color: #993a8e;
+                font-size: 15px;
+                font-weight: bold;
+                box-shadow: 0 2px 8px #eee;
+                cursor: pointer;
+                transition: background 0.2s, color 0.2s, transform 0.2s;
+                outline: none;
+                position: relative;
+            }
+
+            .theme-toggle-btn:hover {
+                background: #ffe0fa;
+                color: #fff;
+                transform: scale(1.08) rotate(-3deg);
+                box-shadow: 0 4px 16px #f3c1f7;
+            }
+        </style>
+        <!-- ...existing code... -->
+        <div style="text-align:center;">
+            <button class="theme-toggle-btn" onclick="setTheme('theme-light')">🌤️ 浅色</button>
+            <button class="theme-toggle-btn" onclick="setTheme('theme-dark')">🌙 深色</button>
+            <button class="theme-toggle-btn" onclick="setTheme('theme-pink')">🍓 粉色</button>
+            <button class="theme-toggle-btn" onclick="setTheme('theme-blue')">💧 蓝色</button>
+            <button class="theme-toggle-btn" onclick="setTheme('theme-green')">🍀 绿色</button>
+            <button class="theme-toggle-btn" onclick="setTheme('theme-yellow')">🌻 黄色</button>
+        </div>
+        <script>
+            function setTheme(theme) {
+                document.body.className = theme;
+            }
+        </script>
+    </header>
+    <div class="container">
+        <section class="intro" id="about">
+            <img src="static/imgs/2.jpg" alt="头像" class="avatar-bounce">
+            <h2>121 <span style="font-size:22px;">🐾</span></h2>
+            <p>欢迎来到我的世界 <span style="font-size:20px;">✨</span></p>
+        </section>
+        <section id="projects">
+            <h2 style="text-align:center;"></h2>
+            <div class="projects">
+                <div class="card card-cute">
+                    <h3>A <span>🍰</span></h3>
+                    <p>我的常用网站</p>
+                    <a href="https://www.bilibili.com/" target="_blank" class="cute-link">点开学习</a>
+                </div>
+                <div class="card card-cute">
+                    <h3>B <span>🧸</span></h3>
+                    <p>我的常用搜索引擎</p>
+                    <a href="https://www.baidu.com/" target="_blank" class="cute-link">点击查找</a>
+                </div>
+                <div class="card card-cute">
+                    <h3>C <span>🌈</span></h3>
+                    <p>我的喜欢</p>
+                    <a href="https://www.douyin.com/user/self?from_tab_name=main&modal_id=7502438629693476155&showTab=like"
+                        target="_blank" class="cute-link">日常&青春</a>
+                    <a href="https://www.douyin.com/user/self?from_tab_name=main&modal_id=6985843608746315022&showTab=like"
+                        target="_blank" class="cute-link">漫画&动漫</a>
+                    <a href="https://www.douyin.com/user/self?from_tab_name=main&modal_id=7452583234422066442&showSubTab=video&showTab=favorite_collection"
+                        target="_blank" class="cute-link">女性&力量</a>
+                    <a href="https://www.douyin.com/user/self?from_tab_name=main&modal_id=7395970667721592115&showTab=like"
+                        target="_blank" class="cute-link">羽毛球&群像</a>
+                </div>
+            </div>
+        </section>
+        <section id="contact" style="margin-top:40px;text-align:center;">
+            <h2>感谢观看 <span style="font-size:22px;">💖</span></h2>
+            <p style="font-size:18px;">祝你天天开心！<span style="font-size:20px;">🌟</span></p>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025.5.20 | 五二零快乐
+    </footer>
+    <style>
+        .avatar-bounce {
+            animation: bounce 1.5s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .card-cute {
+            background: #ffe0fa;
+            color: #993a8e;
+        }
+
+        .cute-link {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 6px 12px;
+            background: #993a8e;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .cute-link:hover {
+            background: #99589b;
+            transform: scale(1.05);
+        }
+    </style>
